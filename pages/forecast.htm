@@ -1,0 +1,14 @@
+<p>
+	<a href="#/">Back to Search</a>
+</p>
+Forecast for {{ city }}
+<hr />
+Number of temperatures to display: <a href="#forecast/5" ng-class="{'bg-primary': temps === '5'}">5</a> | <a href="#forecast/10" ng-class="{'bg-primary': temps === '10'}">10</a> | <a href="#forecast/20" ng-class="{'bg-primary': temps === '20'}">20</a>
+<hr />
+<div ng-repeat="w in weatherResult.list">
+	<div class="row">
+		<div class="col-md-12">
+			<temp-panel temp-object = "w" round-tem="roundTemp(temp)" convert-date="convertToDate(date)" date-format="M/dd/yy h:mm a"></temp-panel>
+		</div>
+	</div>
+</div>
